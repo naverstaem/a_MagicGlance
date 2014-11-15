@@ -1,0 +1,198 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+//=pfl
+  font-family: "Conv_PFDinTextCondPro-Light"
+  font-weight: normal
+  font-style: normal
+=rl
+  font-family: 'robotolight'
+  font-weight: normal
+  font-style: normal
+=rb
+  font-family: 'robotobold'
+  font-weight: normal
+  font-style: normal
+=rr
+  font-family: 'robotoregular'
+  font-weight: normal
+  font-style: normal
+=rm
+  font-family: 'robotomedium'
+  font-weight: normal
+  font-style: normal
+
+
+*
+  outline: none !important
+
+.container
+  max-width: 1000px
+
+input.error, textarea.error
+  box-shadow: inset 0 0 10px red !important
+label.error
+  display: none !important
+
+
+.icon
+  display: inline-block
+  position: relative
+
+body
+  font-size: 16px
+  line-height: 1.4
+  background: #fff
+  color: #1e1e1e
+  font-family: 'robotolight'
+  //+pfl
+.out
+  position: relative
+input, textarea
+  +placeholder
+    font-size: 13px
+    text-transform: none
+    color: #a0a0a0
+    +rl
+%in
+  max-width: 1200px
+  width: 1000px
+  margin-left: auto
+  margin-right: auto
+
+.fancybox-inner
+  +box-shadow(0 38px 40px -40px black)
+.myFancyClose
+  position: absolute
+  top: -8px
+  right: -9px
+  +s(close)
+
+.btn
+  display: inline-block
+  padding: 9px 29px
+  font-size: 13px
+  text-decoration: none
+  text-transform: uppercase
+  +transition(background, .5s)
+  +border-radius(3px)
+  +background-clip(padding-box)
+  background: #a88be9
+  color: #ffffff
+  +box-shadow(0 2px 0 #9f6698, inset 0 -1px 0 rgba(255,255,255,.11))
+  +text-shadow(0 1px 0 rgba(0,0,0,.08))
+  &:hover
+    background: lighten(#a88be9, 10%)
+    +box-shadow(0 0 0 0)
+.title
+  font-size: 70px
+  font-family: 'forumregular'
+  line-height: 1.2em
+  color: #000
+  text-transform: none
+  font-weight: normal
+  position: relative
+  text-align: center
+  &:after
+    position: absolute
+    content: ""
+    width: 96px
+    border-bottom: solid 4px #c95faf
+    height: 0
+    left: 50%
+    +transform(translateX(-50%))
+    bottom: -20px
+
+
+
+.counter
+  display: inline-block
+  vertical-align: middle
+  margin-top: 10px
+  .bl
+    float: left
+    text-align: center
+    margin: 0 12px
+    &:last-of-type
+      margin-right: 0
+    span
+      width: 55px
+      height: 41px
+      display: inline-block
+      +rm
+      font-size: 28px
+      color: white
+      padding-top: 0
+      background: url(../img/counter_bg.png) no-repeat
+      position: relative
+      +box-shadow(black 0 5px 12px -4px)
+      &:after
+        position: absolute
+        content: ":"
+        font-size: 26px
+        color: rgb(58,58,58)
+        top: 0
+        right: -16px
+      &.s
+        &:after
+          content: ""
+
+
+    p
+      font-family: 'robotolight'
+      font-size: 13px
+      color: #a0a0a0
+      margin-top: 6px
+
+
