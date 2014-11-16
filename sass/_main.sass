@@ -98,12 +98,6 @@ header
   padding-top: 115px
   padding-bottom: 220px
 
-  .header_in
-    @extend %in
-    +clr
-    position: relative
-
-
 
   .header__left
     position: relative
@@ -111,7 +105,7 @@ header
     +clr
     text-align: left
 
-    h2
+    h1
       font-size: 49px
       font-family: 'forumregular'
       line-height: 1.2em
@@ -131,11 +125,13 @@ header
 
   &__form
     background: url(../img/form_bg.png) no-repeat center center
-    width: 103%
+    width: 100%
     min-height: 256px
     position: relative
     left: 0
     margin-top: -255px
+    padding-bottom: 60px
+    +cover
     .form__img
       float: left
       display: inline-block
@@ -149,7 +145,7 @@ header
         display: block
     .form__block
       float: right
-      padding-right: 35px
+      padding-right: 0
       padding-top: 25px
       +clr
       .block__top
@@ -189,7 +185,7 @@ header
           padding-left: 15px
         .button--form
           vertical-align: top
-          padding: 12px 35px
+          padding: 10px 34px
           +rb
           font-size: 18px
 
@@ -204,6 +200,7 @@ header
     margin-left: -35px
     +clr
     img
+      max-width: 386px
   &__text
     +clr
     +rl
@@ -561,47 +558,50 @@ header
 .header--bottom
   background: url(../img/header--bottom_bg.jpg) center center no-repeat
   +cover
-  height: 629px
   position: relative
-  min-width: 1000px
-
+  padding-top: 500px
 
   .intro__form--bottom
-    position: absolute
-    bottom: -135px
-    left: 0
+    position: relative
+    top: 135px
 .also
   +clr
-  padding-top: 180px
+  padding-top: 160px
   padding-bottom: 90px
-  .also_in
-    @extend %in
-    width: 830px
+
   h2
     line-height: .8
     color: #3f3f3f
     &:after
       border-bottom: none
   &__items
-    margin-top: 140px
+    margin-top: 80px
+    text-align: center
   .item
     background: url(../img/form_bg--bottom.png) no-repeat
-    height: 586px
-    width: 382px
     text-align: center
     display: inline-block
     vertical-align: top
-    +box
-    margin-right: 60px
-    &:last-child
-      margin-right: 0
-      .img
-        margin-top: -56px
+    margin-top: 60px
+    +cover
+    padding-bottom: 40px
+    .img
+      height: 271px
+      margin-top: -64px
+      display: inline-block
+      margin-bottom: 10px
+      img
+        display: block
+        width: 100%
+        max-width: 305px
+    .img--second
+      margin-top: -56px
+      margin-bottom: 2px
     h3
       font-size: 30px
       font-family: 'forumregular'
       color: #ffffff
-      margin: 5px 0 10px
+      margin: 5px 0 17px
       font-weight: normal
       +text-shadow(0 1px 0 rgba(0,0,0,.08))
 
@@ -615,13 +615,7 @@ header
       text-transform: uppercase
 
 
-  .img
-    height: 271px
-    margin-top: -64px
-    display: inline-block
-    margin-bottom: 10px
-    img
-      display: block
+
   .price-b
     margin: 0 0 20px
     padding: 0 30px
@@ -647,11 +641,12 @@ header
     span
       font-size: 42px
 
-
+  form
+    padding: 0 35px
 
 
   input
-    width: 328px
+    width: 100%
     height: 50px
     margin-bottom: 14px
     padding-left: 15px
@@ -668,8 +663,11 @@ header
 
   .btn--review
     font-size: 18px
-    padding: 13px 85px
+    height: 48px
+    width: 100%
     margin-top: 11px
+    +rb
+
 
 
 
@@ -684,14 +682,11 @@ footer
   box-sizing: border-box
   background: url(../img/footer_bg.png)
   +cover
-  height: 118px
-  padding-top: 40px
+  padding: 40px 0
   font-size: 14px
+  position: relative
   color: #cdcdd5
-  min-width: 1000px
 
-  .footer_in
-    @extend %in
   .footer__left
     float: left
     text-align: left
@@ -705,6 +700,24 @@ footer
   .footer__right
     float: right
     text-align: right
+  .footer__up
+    position: absolute
+    top: -24px
+    left: 50%
+    +transform(translateX(-50%))
+    content: ""
+    background: #c557ab
+    width: 49px
+    height: 49px
+    +border-radius(50%)
+    &:after
+      position: absolute
+      content: ""
+      +s(up)
+      top: 50%
+      left: 50%
+      +transform(translate(-50%,-50%))
+
 
 
 //=============================================
@@ -712,12 +725,12 @@ footer
 //=============================================
 
 .callback
-  width: 382px
   background: url(../img/popup-order_bg.png) center center no-repeat
-  height: 335px
+  +cover
   padding: 20px 25px 35px
-  +box
   text-align: center
+  +border-radius(6px)
+
   h2
     font-family: 'forumregular'
     font-size: 48px
@@ -726,7 +739,8 @@ footer
   form
     margin-top: 25px
     input
-      width: 328px
+      width: 100%
+      display: block
       height: 50px
       margin-bottom: 14px
       padding-left: 15px
@@ -742,20 +756,22 @@ footer
     .button--callback
       margin-top: 10px
       font-size: 18px
-      padding: 13px 85px
+      width: 100%
+      padding: 0
+      height: 48px
 
 
 .thanks
   text-align: center
   background: url(../img/popup-thanks_bg.png) center center no-repeat
-  width: 422px
-  height: 390px
-  +box
+  +cover
   +clr
   font-family: 'forumregular'
   color: #ffffff
+  padding: 30px 0
+  max-width: 422px
+  +border-radius(6px)
   &__img
-    margin-top: 30px
     margin-bottom: 15px
     display: inline-block
     position: relative
@@ -771,11 +787,12 @@ footer
     font-size: 37px
     line-height: 1em
     margin-bottom: 8px
+    margin-top: 0
   h4
     font-weight: normal
     font-size: 23px
     line-height: 1.2em
-    padding: 0 40px
+    padding: 0 30px
 
 
 
@@ -791,3 +808,33 @@ footer
       top: 0 !important
     .row
       text-align: center !important
+  .intro
+    &__form
+      background: rgb(150,208,247)
+    &__img
+      img
+        width: 100%
+  h1, .title
+    font-size: 24px !important
+
+@media (max-width: $screen-xs-min)
+  .intro__form
+    .counter
+      .bl
+        margin: 0 4px !important
+    .block__form
+      form
+        text-align: center !important
+    .block__top
+      text-align: center !important
+  .work
+    .reviews
+      padding-top: 250px
+  footer
+    .footer__left, .footer__right
+      float: none
+      text-align: center
+      margin-top: 10px
+  .instruction
+    h3
+      padding: 0

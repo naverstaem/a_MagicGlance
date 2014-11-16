@@ -1884,14 +1884,14 @@ input::-moz-placeholder, textarea::-moz-placeholder { font-size: 13px; text-tran
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-size: 13px; text-transform: none; color: #a0a0a0; font-family: "robotolight"; font-weight: normal; font-style: normal; }
 input::placeholder, textarea::placeholder { font-size: 13px; text-transform: none; color: #a0a0a0; font-family: "robotolight"; font-weight: normal; font-style: normal; }
 
-header .header_in, .reviews .reviews_in, .also .also_in, footer .footer_in { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
+.reviews .reviews_in { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
 
 .fancybox-inner { -webkit-box-shadow: 0 38px 40px -40px black; box-shadow: 0 38px 40px -40px black; }
 
-.myFancyClose { position: absolute; top: -8px; right: -9px; background: url('../img/icons-sbeee3029f8.png') 0 -32px no-repeat; width: 20px; height: 20px; }
+.myFancyClose { position: absolute; top: -8px; right: -9px; background: url('../img/icons-s3ade936459.png') 0 -32px no-repeat; width: 20px; height: 20px; }
 
 .btn { display: inline-block; padding: 9px 29px; font-size: 13px; text-decoration: none; text-transform: uppercase; -webkit-transition: background, 0.5s; -o-transition: background, 0.5s; transition: background, 0.5s; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background: #a88be9; color: #ffffff; -webkit-box-shadow: 0 2px 0 #9f6698, inset 0 -1px 0 rgba(255, 255, 255, 0.11); box-shadow: 0 2px 0 #9f6698, inset 0 -1px 0 rgba(255, 255, 255, 0.11); text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); }
-.btn:hover { background: #c8b6f1; -webkit-box-shadow: 0 0 0 0; box-shadow: 0 0 0 0; }
+.btn:hover { background: #c8b6f1; -webkit-box-shadow: 0 0 0 0; box-shadow: 0 0 0 0; color: #fff; }
 
 .title { font-size: 70px; font-family: "forumregular"; line-height: 1.2em; color: #000; text-transform: none; font-weight: normal; position: relative; text-align: center; }
 .title:after { position: absolute; content: ""; width: 96px; border-bottom: solid 4px #c95faf; height: 0; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); bottom: -20px; }
@@ -1927,19 +1927,17 @@ header .header_in, .reviews .reviews_in, .also .also_in, footer .footer_in { max
 .navbar-default .navbar-right .right-b-after .callme { font-family: "robotomedium"; font-weight: normal; font-style: normal; }
 
 header { background: url(../img/header_bg.jpg) center center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-align: center; overflow: hidden; color: #ffffff; padding-top: 115px; padding-bottom: 220px; }
-header .header_in { *zoom: 1; position: relative; }
-header .header_in:after { content: " "; display: table; clear: both; }
 header .header__left { position: relative; z-index: 1; *zoom: 1; text-align: left; }
 header .header__left:after { content: " "; display: table; clear: both; }
-header .header__left h2 { font-size: 49px; font-family: "forumregular"; line-height: 1.2em; font-weight: normal; }
+header .header__left h1 { font-size: 49px; font-family: "forumregular"; line-height: 1.2em; font-weight: normal; }
 header .header__left p { font-family: "robotolight"; font-weight: normal; font-style: normal; font-size: 18px; margin-top: 25px; }
 
 .intro { padding-top: 135px; }
-.intro__form { background: url(../img/form_bg.png) no-repeat center center; width: 103%; min-height: 256px; position: relative; left: 0; margin-top: -255px; }
+.intro__form { background: url(../img/form_bg.png) no-repeat center center; width: 100%; min-height: 256px; position: relative; left: 0; margin-top: -255px; padding-bottom: 60px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .intro__form .form__img { float: left; display: inline-block; width: 260px; height: 248px; position: relative; top: -23px; left: 4px; *zoom: 1; }
 .intro__form .form__img:after { content: " "; display: table; clear: both; }
 .intro__form .form__img img { display: block; }
-.intro__form .form__block { float: right; padding-right: 35px; padding-top: 25px; *zoom: 1; }
+.intro__form .form__block { float: right; padding-right: 0; padding-top: 25px; *zoom: 1; }
 .intro__form .form__block:after { content: " "; display: table; clear: both; }
 .intro__form .form__block .block__top { padding-left: 15px; }
 .intro__form .form__block .block__top h2 { display: inline-block; vertical-align: middle; padding-right: 40px; margin-right: 30px; border-right: solid 1px rgba(0, 0, 0, 0.1); margin-top: 0; font-family: "robotobold"; font-weight: normal; font-style: normal; text-transform: uppercase; font-size: 32px; text-align: right; line-height: 1em; }
@@ -1948,11 +1946,12 @@ header .header__left p { font-family: "robotolight"; font-weight: normal; font-s
 .intro__form .form__block .block__form:after { content: " "; display: table; clear: both; }
 .intro__form .form__block .block__form form { text-align: left; }
 .intro__form .form__block .block__form input { width: 237px; height: 47px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-color: #fff; -webkit-box-shadow: inset 1px 2px 0 #86bee4; box-shadow: inset 1px 2px 0 #86bee4; display: inline-block; border: none; margin-right: 10px; padding-left: 15px; }
-.intro__form .form__block .block__form .button--form { vertical-align: top; padding: 12px 35px; font-family: "robotobold"; font-weight: normal; font-style: normal; font-size: 18px; }
+.intro__form .form__block .block__form .button--form { vertical-align: top; padding: 10px 34px; font-family: "robotobold"; font-weight: normal; font-style: normal; font-size: 18px; }
 .intro-b { clear: both; *zoom: 1; position: relative; }
 .intro-b:after { content: " "; display: table; clear: both; }
 .intro__img { text-align: center; margin-left: -35px; *zoom: 1; }
 .intro__img:after { content: " "; display: table; clear: both; }
+.intro__img img { max-width: 386px; }
 .intro__text { *zoom: 1; font-family: "robotolight"; font-weight: normal; font-style: normal; font-size: 14px; padding-bottom: 45px; }
 .intro__text:after { content: " "; display: table; clear: both; }
 .intro__text p { margin-top: 20px; }
@@ -1972,7 +1971,7 @@ header .header__left p { font-family: "robotolight"; font-weight: normal; font-s
 .list { padding-left: 40px; list-style: none; }
 .list li { font-family: "robotolight"; font-weight: normal; font-style: normal; position: relative; margin-top: 15px; }
 .list li span { font-family: "robotobold"; font-weight: normal; font-style: normal; }
-.list li:before { position: absolute; content: ""; background: url('../img/icons-sbeee3029f8.png') 0 0 no-repeat; width: 22px; height: 22px; top: 2px; left: -40px; }
+.list li:before { position: absolute; content: ""; background: url('../img/icons-s3ade936459.png') 0 0 no-repeat; width: 22px; height: 22px; top: 2px; left: -40px; }
 
 .components { padding-top: 60px; padding-bottom: 60px; }
 .components h2 { margin-bottom: 50px; }
@@ -2047,55 +2046,65 @@ header .header__left p { font-family: "robotolight"; font-weight: normal; font-s
 .reviews__items .item .head h3 { font-family: "calibribold"; color: #ffffff; font-size: 22px; font-weight: normal; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15); }
 .reviews__items .item .head h4 { font-size: 13px; color: #dbd9ef; font-weight: normal; font-family: "conv_calibril"; }
 .reviews__items .item .review { position: relative; top: -7px; left: -7px; text-align: left; padding: 25px; margin-top: 43px; background: #ffffff; -moz-border-radius: 14px; -webkit-border-radius: 14px; border-radius: 14px; width: 100%; font-family: "conv_calibril"; font-size: 14px; color: #3f3f3f; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26), inset 0 -1px 0 #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26), inset 0 -1px 0 #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.reviews__items .item .review:before { position: absolute; content: ""; background: url('../img/icons-sbeee3029f8.png') 0 -62px no-repeat; width: 26px; height: 14px; top: -9px; left: 21px; }
+.reviews__items .item .review:before { position: absolute; content: ""; background: url('../img/icons-s3ade936459.png') 0 -62px no-repeat; width: 26px; height: 14px; top: -9px; left: 21px; }
 
-.header--bottom { background: url(../img/header--bottom_bg.jpg) center center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 629px; position: relative; min-width: 1000px; }
-.header--bottom .intro__form--bottom { position: absolute; bottom: -135px; left: 0; }
+.header--bottom { background: url(../img/header--bottom_bg.jpg) center center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: relative; padding-top: 500px; }
+.header--bottom .intro__form--bottom { position: relative; top: 135px; }
 
-.also { *zoom: 1; padding-top: 180px; padding-bottom: 90px; }
+.also { *zoom: 1; padding-top: 160px; padding-bottom: 90px; }
 .also:after { content: " "; display: table; clear: both; }
-.also .also_in { width: 830px; }
 .also h2 { line-height: 0.8; color: #3f3f3f; }
 .also h2:after { border-bottom: none; }
-.also__items { margin-top: 140px; }
-.also .item { background: url(../img/form_bg--bottom.png) no-repeat; height: 586px; width: 382px; text-align: center; display: inline-block; vertical-align: top; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-right: 60px; }
-.also .item:last-child { margin-right: 0; }
-.also .item:last-child .img { margin-top: -56px; }
-.also .item h3 { font-size: 30px; font-family: "forumregular"; color: #ffffff; margin: 5px 0 10px; font-weight: normal; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); }
+.also__items { margin-top: 80px; text-align: center; }
+.also .item { background: url(../img/form_bg--bottom.png) no-repeat; text-align: center; display: inline-block; vertical-align: top; margin-top: 60px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; padding-bottom: 40px; }
+.also .item .img { height: 271px; margin-top: -64px; display: inline-block; margin-bottom: 10px; }
+.also .item .img img { display: block; width: 100%; max-width: 305px; }
+.also .item .img--second { margin-top: -56px; margin-bottom: 2px; }
+.also .item h3 { font-size: 30px; font-family: "forumregular"; color: #ffffff; margin: 5px 0 17px; font-weight: normal; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); }
 .also .item .wave { width: 100%; height: 0; border-bottom: solid 1px rgba(255, 255, 255, 0.2); }
 .also .item p { font-size: 29px; color: #181818; text-transform: uppercase; }
-.also .img { height: 271px; margin-top: -64px; display: inline-block; margin-bottom: 10px; }
-.also .img img { display: block; }
 .also .price-b { margin: 0 0 20px; padding: 0 30px; }
 .also .price-old, .also .price-new { color: #cfe7f7; font-size: 30px; font-family: "forumregular"; padding: 0; background: none; text-align: right; width: 49%; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); display: inline-block; }
 .also .price-old span, .also .price-new span { font-size: 30px; }
 .also .price-new { background: none; color: #ffffff; text-align: left; font-family: "forumregular"; font-size: 48px; }
 .also .price-new span { font-size: 42px; }
-.also input { width: 328px; height: 50px; margin-bottom: 14px; padding-left: 15px; font-size: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-color: #fff; -webkit-box-shadow: inset 1px 2px 0 #86bee4; box-shadow: inset 1px 2px 0 #86bee4; border: none; }
+.also form { padding: 0 35px; }
+.also input { width: 100%; height: 50px; margin-bottom: 14px; padding-left: 15px; font-size: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-color: #fff; -webkit-box-shadow: inset 1px 2px 0 #86bee4; box-shadow: inset 1px 2px 0 #86bee4; border: none; }
 .also input:focus { -webkit-box-shadow: 0 0 9px rgba(204, 62, 82, 0.13); box-shadow: 0 0 9px rgba(204, 62, 82, 0.13); }
-.also .btn--review { font-size: 18px; padding: 13px 85px; margin-top: 11px; }
+.also .btn--review { font-size: 18px; height: 48px; width: 100%; margin-top: 11px; font-family: "robotobold"; font-weight: normal; font-style: normal; }
 
-footer { box-sizing: border-box; background: url(../img/footer_bg.png); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 118px; padding-top: 40px; font-size: 14px; color: #cdcdd5; min-width: 1000px; }
+footer { box-sizing: border-box; background: url(../img/footer_bg.png); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; padding: 40px 0; font-size: 14px; position: relative; color: #cdcdd5; }
 footer .footer__left { float: left; text-align: left; }
 footer .footer__left a { display: block; font-family: "robotolight"; font-weight: normal; font-style: normal; color: #cdcdd5; text-decoration: none; }
 footer .footer__left a:hover { text-decoration: underline; }
 footer .footer__right { float: right; text-align: right; }
+footer .footer__up { position: absolute; top: -24px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); content: ""; background: #c557ab; width: 49px; height: 49px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
+footer .footer__up:after { position: absolute; content: ""; background: url('../img/icons-s3ade936459.png') 0 -86px no-repeat; width: 19px; height: 14px; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-.callback { width: 382px; background: url(../img/popup-order_bg.png) center center no-repeat; height: 335px; padding: 20px 25px 35px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-align: center; }
+.callback { background: url(../img/popup-order_bg.png) center center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; padding: 20px 25px 35px; text-align: center; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
 .callback h2 { font-family: "forumregular"; font-size: 48px; color: #ffffff; font-weight: normal; }
 .callback form { margin-top: 25px; }
-.callback form input { width: 328px; height: 50px; margin-bottom: 14px; padding-left: 15px; font-size: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-color: #fff; -webkit-box-shadow: inset 1px 2px 0 #86bee4; box-shadow: inset 1px 2px 0 #86bee4; border: none; }
+.callback form input { width: 100%; display: block; height: 50px; margin-bottom: 14px; padding-left: 15px; font-size: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background-color: #fff; -webkit-box-shadow: inset 1px 2px 0 #86bee4; box-shadow: inset 1px 2px 0 #86bee4; border: none; }
 .callback form input:focus { -webkit-box-shadow: 0 0 9px rgba(204, 62, 82, 0.13); box-shadow: 0 0 9px rgba(204, 62, 82, 0.13); }
-.callback form .button--callback { margin-top: 10px; font-size: 18px; padding: 13px 85px; }
+.callback form .button--callback { margin-top: 10px; font-size: 18px; width: 100%; padding: 0; height: 48px; }
 
-.thanks { text-align: center; background: url(../img/popup-thanks_bg.png) center center no-repeat; width: 422px; height: 390px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; *zoom: 1; font-family: "forumregular"; color: #ffffff; }
+.thanks { text-align: center; background: url(../img/popup-thanks_bg.png) center center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; *zoom: 1; font-family: "forumregular"; color: #ffffff; padding: 30px 0; max-width: 422px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
 .thanks:after { content: " "; display: table; clear: both; }
-.thanks__img { margin-top: 30px; margin-bottom: 15px; display: inline-block; position: relative; width: 154px; height: 154px; }
+.thanks__img { margin-bottom: 15px; display: inline-block; position: relative; width: 154px; height: 154px; }
 .thanks h2 { font-weight: normal; font-size: 60px; line-height: 1em; }
-.thanks h3 { font-weight: normal; font-size: 37px; line-height: 1em; margin-bottom: 8px; }
-.thanks h4 { font-weight: normal; font-size: 23px; line-height: 1.2em; padding: 0 40px; }
+.thanks h3 { font-weight: normal; font-size: 37px; line-height: 1em; margin-bottom: 8px; margin-top: 0; }
+.thanks h4 { font-weight: normal; font-size: 23px; line-height: 1.2em; padding: 0 30px; }
 
 @media (max-width: 992px) { .about__text--second { margin-top: 0 !important; }
   .instruction__items .item__img:after { width: 0 !important; }
   .work h2 { top: 0 !important; }
-  .work .row { text-align: center !important; } }
+  .work .row { text-align: center !important; }
+  .intro__form { background: #96d0f7; }
+  .intro__img img { width: 100%; }
+  h1, .title { font-size: 24px !important; } }
+@media (max-width: 480px) { .intro__form .counter .bl { margin: 0 4px !important; }
+  .intro__form .block__form form { text-align: center !important; }
+  .intro__form .block__top { text-align: center !important; }
+  .work .reviews { padding-top: 250px; }
+  footer .footer__left, footer .footer__right { float: none; text-align: center; margin-top: 10px; }
+  .instruction h3 { padding: 0; } }
